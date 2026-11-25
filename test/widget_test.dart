@@ -7,7 +7,8 @@ void main() {
   ) async {
     Future<void> pumpTransition() async {
       await tester.pump();
-      await tester.pump(const Duration(milliseconds: 500));
+      await tester.pump(const Duration(milliseconds: 350));
+      await tester.pump();
     }
 
     await tester.pumpWidget(const Md3ShowcaseApp());

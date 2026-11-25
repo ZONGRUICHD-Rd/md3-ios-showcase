@@ -227,6 +227,7 @@ class _HomeShellState extends State<HomeShell> {
     final Widget body = switch (_mainIndex) {
       0 => _CatalogOverviewPage(onNavigate: _navigateTo),
       1 => _DualTabContainer(
+          key: const ValueKey<int>(1),
           tabLabels: const <String>['Actions 操作', 'Communication 通信'],
           selectedSubTab: _subTabIndices[1],
           onSubTabChanged: (int idx) =>
@@ -237,6 +238,7 @@ class _HomeShellState extends State<HomeShell> {
           ],
         ),
       2 => _DualTabContainer(
+          key: const ValueKey<int>(2),
           tabLabels: const <String>['Containment 容器', 'Navigation 导航'],
           selectedSubTab: _subTabIndices[2],
           onSubTabChanged: (int idx) =>
@@ -247,6 +249,7 @@ class _HomeShellState extends State<HomeShell> {
           ],
         ),
       3 => _DualTabContainer(
+          key: const ValueKey<int>(3),
           tabLabels: const <String>['Selection 选择', 'Text Inputs 输入'],
           selectedSubTab: _subTabIndices[3],
           onSubTabChanged: (int idx) =>
@@ -257,6 +260,7 @@ class _HomeShellState extends State<HomeShell> {
           ],
         ),
       _ => _DualTabContainer(
+          key: const ValueKey<int>(4),
           tabLabels: const <String>['Theme & Tokens', 'iOS Probe 探针'],
           selectedSubTab: _subTabIndices[4],
           onSubTabChanged: (int idx) =>
@@ -440,6 +444,7 @@ class _HomeShellState extends State<HomeShell> {
 
 class _DualTabContainer extends StatefulWidget {
   const _DualTabContainer({
+    super.key,
     required this.tabLabels,
     required this.selectedSubTab,
     required this.onSubTabChanged,
