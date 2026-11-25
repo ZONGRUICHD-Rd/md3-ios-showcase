@@ -314,30 +314,30 @@ class _ContainmentPageState extends State<ContainmentPage> {
                 onChanged: (bool v) => setState(() => _tileSwitch = v),
               ),
               const Divider(indent: 16, endIndent: 16),
-              const ListTile(
+              ListTile(
                 isThreeLine: true,
-                leading: Icon(Icons.article_outlined),
-                title: Text('三行列表项 (Three-line)'),
-                subtitle: Text(
+                leading: const Icon(Icons.article_outlined),
+                title: const Text('三行列表项 (Three-line)'),
+                subtitle: const Text(
                   'Material Design 3 会自动根据三行文本调整顶部对齐与垂直间距，确保排版舒适。',
                 ),
                 trailing: Badge.count(count: 3),
               ),
               const Divider(),
-              ExpansionTile(
-                leading: const Icon(Icons.expand_more),
-                title: const Text('ExpansionTile 折叠展开'),
-                subtitle: const Text('点击展开查看内部子项'),
+              const ExpansionTile(
+                leading: Icon(Icons.expand_more),
+                title: Text('ExpansionTile 折叠展开'),
+                subtitle: Text('点击展开查看内部子项'),
                 children: <Widget>[
-                  const ListTile(
+                  ListTile(
                     title: Text('子项 1：iOS 流畅高度动画'),
                     dense: true,
                   ),
-                  const ListTile(
+                  ListTile(
                     title: Text('子项 2：Shape & Divider 自动处理'),
                     dense: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 36,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -348,7 +348,7 @@ class _ContainmentPageState extends State<ContainmentPage> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                 ],
               ),
             ],

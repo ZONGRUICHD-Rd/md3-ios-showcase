@@ -46,12 +46,12 @@ class _InputsPageState extends State<InputsPage> {
                 '测试 MD3 Filled & Outlined 输入框在 iOS 软键盘弹出、自动纠错、长按选区菜单 (Copy/Paste) 与表单验证下的表现。',
             icon: Icons.keyboard_alt_outlined,
           ),
-          SectionCard(
+          const SectionCard(
             title: 'Filled & Outlined TextFields',
             subtitle: '点击空白处可收起 iOS 键盘',
             child: Column(
               children: <Widget>[
-                const TextField(
+                TextField(
                   decoration: InputDecoration(
                     filled: true,
                     labelText: 'Filled TextField',
@@ -60,8 +60,8 @@ class _InputsPageState extends State<InputsPage> {
                     prefixIcon: Icon(Icons.person_outline),
                   ),
                 ),
-                const SizedBox(height: 16),
-                const TextField(
+                SizedBox(height: 16),
+                TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Outlined TextField',
@@ -71,8 +71,8 @@ class _InputsPageState extends State<InputsPage> {
                     suffixIcon: Icon(Icons.qr_code_scanner),
                   ),
                 ),
-                const SizedBox(height: 16),
-                const TextField(
+                SizedBox(height: 16),
+                TextField(
                   maxLines: 3,
                   maxLength: 140,
                   keyboardType: TextInputType.multiline,

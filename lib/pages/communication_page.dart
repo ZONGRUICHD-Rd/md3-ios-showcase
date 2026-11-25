@@ -58,9 +58,9 @@ class _CommunicationPageState extends State<CommunicationPage> {
                 isLabelVisible: _badgeCount > 0,
                 child: const Icon(Icons.notifications_none, size: 28),
               ),
-              const Badge.count(
+              Badge.count(
                 count: 1024,
-                child: Icon(Icons.forum_outlined, size: 28),
+                child: const Icon(Icons.forum_outlined, size: 28),
               ),
               Badge(
                 label: const Text('NEW'),

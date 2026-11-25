@@ -93,7 +93,7 @@ class _IosProbePageState extends State<IosProbePage>
             ],
           ),
         ),
-        SectionCard(
+        const SectionCard(
           title: 'iOS Taptic Engine 触感反馈测试',
           subtitle: '真机运行点击可体验不同强度的原生震动反馈',
           child: Wrap(
@@ -102,23 +102,23 @@ class _IosProbePageState extends State<IosProbePage>
             children: <Widget>[
               FilledButton.tonal(
                 onPressed: HapticFeedback.lightImpact,
-                child: const Text('Light Impact'),
+                child: Text('Light Impact'),
               ),
               FilledButton.tonal(
                 onPressed: HapticFeedback.mediumImpact,
-                child: const Text('Medium Impact'),
+                child: Text('Medium Impact'),
               ),
               FilledButton.tonal(
                 onPressed: HapticFeedback.heavyImpact,
-                child: const Text('Heavy Impact'),
+                child: Text('Heavy Impact'),
               ),
               OutlinedButton(
                 onPressed: HapticFeedback.selectionClick,
-                child: const Text('Selection Click'),
+                child: Text('Selection Click'),
               ),
               OutlinedButton(
                 onPressed: HapticFeedback.vibrate,
-                child: const Text('Vibrate'),
+                child: Text('Vibrate'),
               ),
             ],
           ),
